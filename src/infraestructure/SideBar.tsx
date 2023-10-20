@@ -1,6 +1,5 @@
 import * as React from "react";
 
-import { CartContext } from "../App";
 import { ContextType, Product } from "../domain/interface";
 import CloseIcon from "@mui/icons-material/Close";
 import {
@@ -9,6 +8,7 @@ import {
   RemoveProductFromCart,
 } from "../application/CartManager";
 import { Divider } from "@mui/material";
+import { CartContext } from "../domain/context";
 export const Sidebar = ({
   isOpenSideBar,
   setIsOpenSideBar,
