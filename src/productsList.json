@@ -1,0 +1,23 @@
+ [
+  {
+    "PalaPadel": {
+      "id": "a924de1a-4396-4d18-824d-08b82e33d61e",
+      "nombre": "Pala de Pádel Pro Elite X1"
+    },
+    "Quantity": 0
+  },
+  {
+    "PalaPadel": {
+      "id": "bdd4c925-8f65-4517-9c8e-08b82e33d61e",
+      "nombre": "Pala de Pádel Control Master Pro"
+    },
+    "Quantity": 0
+  },
+  {
+    "PalaPadel": {
+      "id": "b7604c6d-8f65-4517-9c8e-08b82e33d61e",
+      "nombre": "Pala de Pádel Junior 25 Pro"
+    },
+    "Quantity": 0
+  }
+]
