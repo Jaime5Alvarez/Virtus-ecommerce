@@ -33,7 +33,13 @@ export const RemoveProductFromCart = (
     })
   );
 };
-
+export const calculateTotalPrice = (cart: Product[]) => {
+  let totalPrice = 0;
+  cart.forEach((product: Product) => {
+    totalPrice += product.Quantity * product.PalaPadel.price; // Precio * Cantidad
+  });
+  return totalPrice;
+};
 export const AddProductToCart = (
   newProduct: Product,
   setCart: Dispatch<SetStateAction<Product[]>>,
@@ -51,7 +57,9 @@ export const AddProductToCart = (
       {
         PalaPadel: {
           id: newProduct.PalaPadel.id,
-          nombre: newProduct.PalaPadel.nombre,
+          name: newProduct.PalaPadel.name,
+          link: newProduct.PalaPadel.link,
+          price: newProduct.PalaPadel.price,
         },
         Quantity: 1,
       },

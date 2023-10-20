@@ -2,7 +2,7 @@ import { Dispatch, SetStateAction } from "react";
 
 export interface PalaPadel {
   id: string;
-  nombre: string;
+  name: string;
 }
 
 export interface Cart {
@@ -11,8 +11,9 @@ export interface Cart {
 export interface Product {
   PalaPadel: {
     id: string;
-    nombre: string;
-    // Otros campos
+    name: string;
+    link: string;
+    price: number;
   };
   Quantity: number;
 }

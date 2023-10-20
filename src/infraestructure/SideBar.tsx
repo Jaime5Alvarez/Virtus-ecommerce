@@ -6,6 +6,7 @@ import {
   AddProductToCart,
   DeleteProductFromCart,
   RemoveProductFromCart,
+  calculateTotalPrice,
 } from "../application/CartManager";
 import { Divider } from "@mui/material";
 import { CartContext } from "../domain/context";
@@ -18,7 +19,7 @@ export const Sidebar = ({
 }) => {
   return (
     <>
-      {!isOpenSideBar && (
+      {isOpenSideBar && (
         <div
           className="fixed w-full h-full bg-black opacity-50 z-10"
           onClick={() => setIsOpenSideBar((prev) => !prev)}
@@ -26,7 +27,7 @@ export const Sidebar = ({
       )}
       <section
         className={` fixed  z-20 overflow-y-auto max-h-screen  bg-slate-200 drop-shadow-lg duration-200 ease-in-out w-72 min-h-screen ${
-          isOpenSideBar && "-translate-x-full"
+          !isOpenSideBar && "-translate-x-full"
         } `}
       >
         <div className="relative">
@@ -34,10 +35,9 @@ export const Sidebar = ({
         </div>
         <button
           onClick={() => {
-            console.log("Hola");
             setIsOpenSideBar((prev) => !prev);
           }}
-          className="absolute hover:animate-pulse right-4 top-4 px-2 text-white text-lg  bg-slate-500 rounded-full"
+          className="fixed hover:animate-pulse right-4 top-4 px-1 text-white text-lg  bg-slate-500 rounded-full"
         >
           <CloseIcon />
         </button>
@@ -47,11 +47,11 @@ export const Sidebar = ({
 };
 export const CartSideBar = () => {
   const { cart, setCart } = React.useContext(CartContext) as ContextType;
-
+  const totalPrice = calculateTotalPrice(cart);
   return (
     <>
       <section className="my-10 mx-2">
-        <h1 className="font-bold text-2xl mb-4 text-center text-slate-500">
+        <h1 className="font-bold text-3xl mb-4 text-center text-slate-500">
           Cart
         </h1>
         <ul>
@@ -60,8 +60,9 @@ export const CartSideBar = () => {
               className="flex flex-col my-5 bg-slate-300 rounded-lg"
               key={product.PalaPadel.id}
             >
-              <h4 className="font-bold text-lg">{product.PalaPadel.nombre}</h4>
-              <span className="">Quantity: {product.Quantity} </span>
+              <h4 className="font-bold text-lg">{product.PalaPadel.name}</h4>
+              <span className="mb-2">Quantity: {product.Quantity} </span>
+              <span className="mb-2">Price: {product.PalaPadel.price} </span>
               <div className="flex justify-center gap-6">
                 <button
                   className="px-2 rounded-xl hover:animate-pulse bg-slate-500 text-white  font-extrabold"
@@ -93,7 +94,7 @@ export const CartSideBar = () => {
             onClick={() => setCart([])}
             className="px-2 mt-[1rem] w-full rounded-xl bg-slate-600 text-white  font-extrabold"
           >
-            Check out
+            Check out {totalPrice}€
           </button>
         ) : (
           <h3 className="my-[1rem] bg-slate-500 rounded-lg py-2 text-white">
