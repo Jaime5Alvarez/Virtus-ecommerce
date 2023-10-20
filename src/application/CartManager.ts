@@ -36,7 +36,8 @@ export const RemoveProductFromCart = (
 export const calculateTotalPrice = (cart: Product[]) => {
   let totalPrice = 0;
   cart.forEach((product: Product) => {
-    totalPrice += product.Quantity * product.PalaPadel.price; // Precio * Cantidad
+    totalPrice += product.Quantity * product.PalaPadel.price;
+    totalPrice = Number(totalPrice.toFixed(2));
   });
   return totalPrice;
 };
