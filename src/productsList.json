@@ -1,4 +1,4 @@
- [
+[
   {
     "PalaPadel": {
       "id": "a924de1a-4396-4d18-824d-08b82e33d61e",
@@ -17,6 +17,62 @@
     "PalaPadel": {
       "id": "b7604c6d-8f65-4517-9c8e-08b82e33d61e",
       "nombre": "Pala de Pádel Junior 25 Pro"
+    },
+    "Quantity": 0
+  },
+  {
+    "PalaPadel": {
+      "id": "e20451a5-7f69-438a-bb28-08b82e33d61e",
+      "nombre": "Pala de Pádel Supreme Pro"
+    },
+    "Quantity": 0
+  },
+  {
+    "PalaPadel": {
+      "id": "2f35e99c-4fe1-4ebf-99a7-08b82e33d61e",
+      "nombre": "Pala de Pádel Power Max"
+    },
+    "Quantity": 0
+  },
+  {
+    "PalaPadel": {
+      "id": "4d22d6e0-3b42-4e2d-a380-08b82e33d61e",
+      "nombre": "Pala de Pádel Carbon Pro X2"
+    },
+    "Quantity": 0
+  },
+  {
+    "PalaPadel": {
+      "id": "22f9b41f-4759-4e05-891a-08b82e33d61e",
+      "nombre": "Pala de Pádel Advance X3"
+    },
+    "Quantity": 0
+  },
+  {
+    "PalaPadel": {
+      "id": "9c4a1ae5-53e2-476b-9a52-08b82e33d61e",
+      "nombre": "Pala de Pádel Lightning Pro"
+    },
+    "Quantity": 0
+  },
+  {
+    "PalaPadel": {
+      "id": "bb12d862-8f57-4be0-9d6e-08b82e33d61e",
+      "nombre": "Pala de Pádel Elite Master X4"
+    },
+    "Quantity": 0
+  },
+  {
+    "PalaPadel": {
+      "id": "dcf9a61e-4ef4-4873-8921-08b82e33d61e",
+      "nombre": "Pala de Pádel Thunder Pro"
+    },
+    "Quantity": 0
+  },
+  {
+    "PalaPadel": {
+      "id": "bb93c7a9-5509-4824-8b9c-08b82e33d61e",
+      "nombre": "Pala de Pádel Strike X5"
     },
     "Quantity": 0
   }

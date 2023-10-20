@@ -1,3 +1,5 @@
+import { Dispatch, SetStateAction } from "react";
+
 export interface PalaPadel {
   id: string;
   nombre: string;
@@ -14,3 +16,7 @@ export interface Product {
   };
   Quantity: number;
 }
+export type ContextType = {
+  cart: Product[];
+  setCart: Dispatch<SetStateAction<Product[]>>;
+};

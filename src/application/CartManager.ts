@@ -1,5 +1,5 @@
 import { Dispatch, SetStateAction } from "react";
-import { Product } from "../interface";
+import { Product } from "../domain/interface";
 
 export const DeleteProductFromCart = (
   product: Product,
