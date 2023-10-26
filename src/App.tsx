@@ -1,11 +1,11 @@
-import { useState, Dispatch, SetStateAction, useContext } from "react";
+import { useState } from "react";
 import "./App.css";
-import { ContextType, Product } from "./domain/interface";
+import { Product } from "./domain/interface";
 import { Sidebar } from "./infraestructure/SideBar";
 import { Header } from "./infraestructure/Header";
 import { ProductsList } from "./infraestructure/ProductsList";
 import { CartContext } from "./domain/context";
-import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import { ShopingCart } from "./infraestructure/ShopingCart";
 
 function App() {
   const [cart, setCart] = useState<Product[]>([]);
@@ -13,7 +13,7 @@ function App() {
 
   return (
     <>
-      <main className="font-mono  ">
+      <main className="font-mono dark:bg-slate-800 bg-gradient-to-t from-s bg-slate-500 dark:from-slate-600 to-slate-800 ">
         <CartContext.Provider value={{ cart, setCart }}>
           <ShopingCart setIsOpenSideBar={setIsOpenSideBar} />
 
@@ -33,27 +33,3 @@ function App() {
 }
 
 export default App;
-
-export const ShopingCart = ({
-  setIsOpenSideBar,
-}: {
-  setIsOpenSideBar: Dispatch<SetStateAction<boolean>>;
-}) => {
-  const { cart } = useContext(CartContext) as ContextType;
-
-  return (
-    <>
-      <span
-        onClick={() => setIsOpenSideBar((prev) => !prev)}
-        className="fixed bottom-5 right-5  cursor-pointer scale-150 bg-slate-300 hover:bg-opacity-80 duration-200 ease-in-out rounded-full p-2 "
-      >
-        <div className="relative ">
-          <ShoppingCartIcon />
-          <span className="absolute text-sm -top-1 -right-1 bg-blue-400 rounded-full w-4 h-4 text-center flex justify-center items-center ">
-            {cart.length}
-          </span>
-        </div>
-      </span>
-    </>
-  );
-};

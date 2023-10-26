@@ -26,7 +26,7 @@ export const Sidebar = ({
         ></div>
       )}
       <section
-        className={` fixed  z-20 overflow-y-auto max-h-screen  bg-slate-200 drop-shadow-lg duration-200 ease-in-out w-72 min-h-screen ${
+        className={` fixed  z-20 overflow-y-auto max-h-screen bg-slate-200  dark:bg-slate-800 drop-shadow-lg duration-200 ease-in-out w-72 min-h-screen ${
           !isOpenSideBar && "-translate-x-full"
         } `}
       >
@@ -37,7 +37,7 @@ export const Sidebar = ({
           onClick={() => {
             setIsOpenSideBar((prev) => !prev);
           }}
-          className="fixed hover:animate-pulse right-4 top-4 px-1 text-white text-lg  bg-slate-500 rounded-full"
+          className="fixed hover:animate-pulse right-4 top-4 px-1 text-white text-lg dark:bg-slate-600 bg-slate-500 rounded-full"
         >
           <CloseIcon />
         </button>
@@ -57,7 +57,7 @@ export const CartSideBar = () => {
         <ul>
           {cart.map((product: Product) => (
             <li
-              className="flex flex-col my-5 bg-slate-300 rounded-lg"
+              className="flex flex-col my-5 dark:text-white bg-slate-300 dark:bg-slate-600 rounded-lg"
               key={product.PalaPadel.id}
             >
               <h4 className="font-bold text-lg">{product.PalaPadel.name}</h4>
@@ -65,7 +65,7 @@ export const CartSideBar = () => {
               <span className="mb-2">Price: {product.PalaPadel.price} </span>
               <div className="flex justify-center gap-6">
                 <button
-                  className="px-2 rounded-xl hover:animate-pulse bg-slate-500 text-white  font-extrabold"
+                  className="px-2 rounded-xl hover:animate-pulse bg-slate-500  text-white  font-extrabold"
                   onClick={() => AddProductToCart(product, setCart, cart)}
                 >
                   +
