@@ -21,7 +21,7 @@ export const Sidebar = ({
     <>
       {isOpenSideBar && (
         <div
-          className="fixed w-full h-full bg-black opacity-50 z-10"
+          className="fixed w-full h-full bg-black opacity-50   z-10"
           onClick={() => setIsOpenSideBar((prev) => !prev)}
         ></div>
       )}
