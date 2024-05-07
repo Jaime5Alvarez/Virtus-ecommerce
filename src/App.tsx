@@ -13,7 +13,7 @@ function App() {
 
   return (
     <>
-      <main className="font-mono dark:bg-slate-800 bg-gradient-to-t from-s bg-slate-500 dark:from-slate-600 to-slate-800 h-screen ">
+      <main className="font-mono dark:bg-slate-800 bg-gradient-to-t from-s bg-slate-500 dark:from-slate-600 to-slate-800">
         <CartContext.Provider value={{ cart, setCart }}>
           <ShopingCart setIsOpenSideBar={setIsOpenSideBar} />
 
